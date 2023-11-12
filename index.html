@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="main.js" defer></script>
-  <title>Music Search</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>Music Search</title>
+  </head>
+  <body>
+    <nav>
+      <h1>Really Awesome Music Site</h1>
+    </nav>
+
+    <figure>
+      <audio src="" controls>
+        <source />
+      </audio>
+
+      <figcaption>Now playing:</figcaption>
+    </figure>
+
+    <h2>Search Music by Artist or Track</h2>
+    <form action="" id="inputForm">
+      <input type="text" name="inputField" id="inputField" />
+      <button type="submit" id="inputButton">Search</button>
+    </form>
+    <br />
+    <h3>Search Results</h3>
+    <h3 id="results"></h3>
+    <div id="container"></div>
+  </body>
 </html>
