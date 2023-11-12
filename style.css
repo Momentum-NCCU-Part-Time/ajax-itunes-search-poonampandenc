@@ -5,11 +5,6 @@
     box-sizing: border-box;
 }
 
-html
-{
-
-}
-
 h1, h2, nav, div, figure, #figure-caption {
     position: relative;
     width: 100%;
@@ -19,7 +14,18 @@ h1, h2, nav, div, figure, #figure-caption {
     align-items: center;
     flex-direction: column;
     padding: 20px 0;
-
+    
+h3 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* justify-content: left;
+    align-items: left; */
+    /* flex-direction: column; */
+    padding: 20px;
+    border-top: 100px;
+}
 
 }
 #results {
@@ -53,11 +59,28 @@ audio {
     padding: 0 5px;
 }
 
+#inputField {
+    display:flex;
+    /* column-width: 20px; */
+    justify-content: left;
+}
+
+#inputButton {
+    display: flex;
+    width: 80px;
+    justify-content: center;
+}
 #inputForm {
-    display: inline;
-    /* flex-flow: nowrap;
-    justify-items: center; */
-    /* width: 250px; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    min-height: auto;
+}
+
+form {
+    display: inline-block;
+    margin: 0 auto;
+    width: 20%;
 }
 
 figure {

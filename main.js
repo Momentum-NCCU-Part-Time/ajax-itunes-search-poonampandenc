@@ -6,6 +6,11 @@ let results = document.getElementById('results');
 let button = document.getElementById('inputButton');
 let container = document.getElementById("container");
 
+// audio = document.createElement('audio'),
+// audioSource = document.createElement('source')
+
+// audioSource.src = results.previewUrl;
+// audio.controls = true;
 
 inputForm.addEventListener('submit', (event) => {
   event.preventDefault();
