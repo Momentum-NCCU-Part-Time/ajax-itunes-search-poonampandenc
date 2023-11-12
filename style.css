@@ -78,9 +78,9 @@ audio {
 }
 
 form {
-    display: inline-block;
+    display: block;
     margin: 0 auto;
-    width: 20%;
+    width: fit-content;;
 }
 
 figure {
