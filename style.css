@@ -62,19 +62,21 @@ audio {
 #inputField {
     display:flex;
     /* column-width: 20px; */
-    justify-content: left;
+    justify-content: left; 
+    width: 100%;   
 }
 
 #inputButton {
     display: flex;
-    width: 80px;
+    width: 100px;
     justify-content: center;
 }
 #inputForm {
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    min-height: auto;
+    height: 100px;
+    width: 80%;
 }
 
 form {
