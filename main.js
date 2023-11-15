@@ -5,6 +5,8 @@ let inputField = document.getElementById('inputField');
 let results = document.getElementById('results');
 let button = document.getElementById('inputButton');
 let container = document.getElementById("container");
+let playPreview = document.getElementById("previewUrl");
+let songTitle = document.getElementById("trackName")
 
 // audio = document.createElement('audio'),
 // audioSource = document.createElement('source')
@@ -18,12 +20,7 @@ inputForm.addEventListener('submit', (event) => {
 
   document.addEventListener('play', event => {
     const audio = document.getElementsByTagName('audio');
-    for(let i=0; i < audio.length ; i++){
-        if(audio[i] |=event.target){
-            audio[i].pause();
-        }
-    }
-  })
+     })
   
   while (container.firstChild) {
         container.removeChild(container.firstChild);
@@ -46,21 +43,25 @@ inputForm.addEventListener('submit', (event) => {
         artist = document.createElement('h2'),
         track = document.createElement('h2'),
         img = document.createElement('img'),
-        audio = document.createElement('audio'),
-        audioSource = document.createElement('source')
+        playButton = document.createElement('button')
+
+        playButton.innerText = "Play Preview"
+
+        playButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          playPreview.src = results.previewUrl;
+          songTitle.innerText += " " + results.trackName;
+        })
 
     artist.innerHTML = results.artistName;
     track.innerHTML = results.trackName;
     img.src = results.artworkUrl100;
-    audioSource.src = results.previewUrl;
-    audio.controls = true;
-
+    
     songCard.appendChild(img);
     songCard.appendChild(artist);
     songCard.appendChild(track);
-    songCard.appendChild(audio);
-    audio.appendChild(audioSource);
-
+    songCard.appendChild(playButton);
+    
     container.appendChild(songCard);
 })
 })
